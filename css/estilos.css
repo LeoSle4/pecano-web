@@ -1,4 +1,4 @@
-/* Variables de color */
+
 :root {
     --blanco: #ffffff;
     --negro: #000000;
@@ -6,7 +6,7 @@
     --fuenteHeadings: 'Roboto', sans-serif;
 }
 
-/* Estilos Generales */
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -18,7 +18,7 @@ h1 {
     color: var(--blanco);
 }
 
-/* Fondo */
+
 .fondo {
     position: relative;
     width: 100%;
@@ -108,7 +108,7 @@ h1 {
     text-transform: uppercase;
 }
 
-/* Boton */
+
 .boton {
     display: block;
     font-family: var(--fuenteHeadings);
@@ -139,7 +139,7 @@ h1 {
     color: var(--blanco);
 }
 
-/* Registro */
+
 .formulario-registro {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
