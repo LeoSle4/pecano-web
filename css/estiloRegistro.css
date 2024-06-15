@@ -1,0 +1,66 @@
+
+:root {
+    --blanco: #ffffff;
+    --negro: #000000;
+    --gris: #808080;
+    --fuenteHeadings: 'Roboto', sans-serif;
+}
+
+
+.fondo--registro {
+    background-image: url('/imagenes/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.formularioRegistro {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    grid-template-areas:
+        'nombre apellido'
+        'email email2'
+        'contraseña contraseña2'
+        'boton1 boton2';
+    max-width: 800px; /* Ajusta según necesites */
+    margin: 0 auto; /* Centrar el formulario */
+}
+
+.registro__field {
+    border: none;
+    border-bottom: 0.2rem solid var(--blanco);
+    padding: 1rem;
+    color: var(--blanco);
+    background-color: transparent;
+    width: 100%;
+    font-family: var(--fuenteHeadings);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.registro__field::placeholder {
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+
+.boton {
+    font-family: var(--fuenteHeadings);
+    color: var(--negro);
+    background: var(--blanco);
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: var(--gris);
+    color: var(--blanco);
+}
+
