@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pecano - Frutos Secos</title>
     <link rel="stylesheet" href="css/estilosInicio.css">
+    <script defer src="/js/inicio.js"></script>
+
 </head>
 <body>
+    <script>
+        window.onload = function() {
+            saludarSegunHora();
+        };
+    </script>
     <header>
         <div class="logo">Pecano</div>
         <nav>
@@ -14,14 +21,18 @@
             <a href="#nosotros">Nosotros</a>
             <a href="#productos">Productos</a>
             <a href="#contacto">Contáctenos</a>
+            <a href="login.html">Iniciar Sesión</a>
         </nav>
     </header>
     
     <section id="inicio">
         <div class="intro">
+            <a id="saludo">...</a><br><br>
             <img src="imagenes/logoindex .jpg" alt="Imagen introductoria" width="600" height="300">
         </div>
+
     </section>
+
     
     <section id="nosotros">
         <div class="contenido">
@@ -45,43 +56,48 @@
         <p>Tenemos una variedad de frutos secos y frutos secos deshidratados</p>
         <br>
         <div class="productos-grid">
-            <div class="producto">
+            <div class="producto" data-imagen="imagenes/cerezas.jpg">
                 <h3>Cereza</h3>
                 <img src="imagenes/cerezas.jpg" alt="Cereza" width="300" height="300">
                 <p>Saborea la riqueza de nuestras Cerezas Deshidratadas, un deleite lleno de antioxidantes y fibra.</p>
             </div>
-            <div class="producto">
+            <div class="producto" data-imagen="imagenes/pecana.jpg">
                 <h3>Pecana</h3>
                 <img src="imagenes/pecana.jpg" alt="Pecana" width="300" height="300">
                 <p>Deléitate con el sabor único de nuestras Pecanas Deshidratadas, llenas de antioxidantes, vitaminas y minerales.</p>
             </div>
-            <div class="producto">
+            <div class="producto" data-imagen="imagenes/almendra.jpg">
                 <h3>Almendra</h3>
                 <img src="imagenes/almendra.jpg" alt="Almendra" width="300" height="300">
                 <p>Disfruta de nuestras Almendras Deshidratadas, una fuente excelente de proteínas y grasas saludables.</p>
             </div>
-            <div class="producto">
+            <div class="producto" data-imagen="imagenes/pistachos.jpg">
                 <h3>Pistacho</h3>
                 <img src="imagenes/pistachos.jpg" alt="Pistacho" width="300" height="300">
                 <p>Descubre el crujiente placer de nuestros Pistachos Deshidratados, ricos en proteínas, fibra y antioxidantes.</p>
             </div>
         </div>
     </section>
+ 
+    <section id="precios">
+        <h2>Calcular Precios</h2>
+        <form id="formulario-precios">
+            <label for="producto">Seleccione un producto:</label>
+            <select id="producto" name="producto">
+                <option value="cereza">Cereza</option>
+                <option value="pistacho">Pistacho</option>
+                <option value="almendra">Almendra</option>
+                <option value="pecana">Pecana</option>
+            </select><br>
     
-    <section id="contacto">
-        <h2>Contáctenos</h2>
-        <form action="">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="correo">Correo:</label>
-            <input type="email" id="correo" name="correo" required>
-            <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="telefono" required>
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Cancelar">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" required><br>
+    
+            <input type="submit" value="Calcular">
+            <input type="reset" value="Limpiar">
         </form>
+    
+        <div id="resultado"></div>
     </section>
     
     <footer>

@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +13,7 @@ body {
 }
 
 header {
-    background-color: #2c3e50;
+    background-color: #34495e;
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -30,25 +31,33 @@ nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
-    padding: 5px 10px;
+    padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #34495e;
+    background-color: #2c3e50;
 }
 
+
 section {
-    padding: 60px 20px;
-    margin: 20px 0;
     background-color: white;
+    padding: 40px;
+    margin: 20px 0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
 
 #inicio .intro {
     text-align: center;
@@ -85,7 +94,7 @@ section {
     border-radius: 5px;
 }
 
-#productos h2, #contacto h2 {
+#productos h2, #contacto h2, #precios h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #2c3e50;
@@ -117,27 +126,27 @@ section {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-#contacto form {
-    max-width: 600px;
+#precios form {
+    max-width: 400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-#contacto label {
+#precios label {
     font-weight: bold;
     color: #2c3e50;
 }
 
-#contacto input, #contacto textarea {
+#precios input, #precios select {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
 }
 
-#contacto input[type="submit"], #contacto input[type="reset"] {
+#precios input[type="submit"], #precios input[type="reset"] {
     background: #2c3e50;
     color: white;
     border: none;
@@ -147,8 +156,41 @@ section {
     transition: background 0.3s ease;
 }
 
-#contacto input[type="submit"]:hover, #contacto input[type="reset"]:hover {
+#precios input[type="submit"]:hover, #precios input[type="reset"]:hover {
     background: #34495e;
+}
+
+#resultado {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#resultado h3 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#resultado p {
+    margin-bottom: 15px;
+}
+
+#resultado .precio-detalle {
+    display: flex;
+    justify-content: space-between;
+}
+
+#resultado .precio-detalle span {
+    font-weight: bold;
+}
+
+#resultado .precio-total {
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
 footer {
@@ -159,6 +201,10 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 40px;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
+
+
